@@ -1276,6 +1276,7 @@
 			<!--begin:Menu sub-->
 			<div class="menu-sub menu-sub-lg-down-accordion menu-sub-lg-dropdown p-0 w-100 w-lg-850px">
 			{{-- <!--{{<!==layout-partial:layout/partials/header/_menu/__layouts.html-->}}--&gt; --}}
+			@include('dashboard.layout.partials.header._menu.__layouts')
 		
 		</div>
 			<!--end:Menu sub-->
