@@ -1,32 +1,57 @@
 <!DOCTYPE html>
 <!--
-Author: Keenthemes
-Product Name: Metronic - Bootstrap 5 HTML, VueJS, React, Angular & Laravel Admin Dashboard Theme
-Purchase: https://1.envato.market/EA4JP
-Website: http://www.keenthemes.com
-Contact: support@keenthemes.com
-Follow: www.twitter.com/keenthemes
-Dribbble: www.dribbble.com/keenthemes
-Like: www.facebook.com/keenthemes
-License: For each use you must have a valid license purchased only from above link in order to legally use the theme for your project.
+Author: SANDIPAN DAS
+Product Name: LARAVEL 9 BOILERPLATE - Bootstrap 5, HTML, VueJS, Laravel Admin Dashboard Theme
+Website: http://www.sandipandas.dev
+Contact: hello@sandipandas.net
+Follow: www.twitter.com/sandipandas_net
+Dribbble: www.dribbble.com/sandipandas
+Like: www.facebook.com/sandipandas.net
 -->
 <html lang="en">
 <!--begin::Head-->
 
 <head>
-    {{-- <base href="">	</base> --}}
+
+    {{-- SEO START --}}
     <title>@yield('title')</title>
+    {!! SEOMeta::generate() !!}
+    {!! OpenGraph::generate() !!}
+    {!! Twitter::generate() !!}
+    {!! JsonLd::generate() !!}
+
+
+    <!-- AI SEO  -->
+    {{-- GOOGLE MARKUP --}}
     <meta charset="utf-8" />
     <meta name="description" content="@yield('metadescription')" />
     <meta name="keywords" content="@yield('metakeyword')" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe">
+
+
     <meta property="og:locale" content="en_US" />
-    <meta property="og:type" content="article" />
-    <meta property="og:title"
-        content="Metronic - Bootstrap 5 HTML, VueJS, React, Angular &amp; Laravel Admin Dashboard Theme" />
-    <meta property="og:url" content="https://keenthemes.com/metronic" />
     <meta property="og:site_name" content="Keenthemes | Metronic" />
+
+    {{-- SEO FACEBOOK MARKUP --}}
+    <meta property="og:url"
+        content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="When Great Minds Don’t Think Alike" />
+    <meta property="og:description" content="How much does culture influence creative thinking?" />
+    <meta property="og:image"
+        content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg" />
+    {{-- TWITTER MARKUP --}}
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@nytimesbits" />
+    <meta name="twitter:creator" content="@nickbilton" />
+
+
+
+    {{-- <base href=""> --}}
     <link rel="canonical" href="https://preview.keenthemes.com/metronic8" />
+
+    {{-- SEO END --}}
     <link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
     <!--begin::Fonts-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
@@ -42,7 +67,8 @@ License: For each use you must have a valid license purchased only from above li
     <link href="{{ asset('/assets/css/style.bundle.css') }}" rel="stylesheet" type="text/css" />
     <!--end::Global Stylesheets Bundle-->
     <!--end::Head-->
-@yield('style')
+    {{-- </base> --}}
+    @yield('style')
 </head>
 <!--begin::Body-->
 
@@ -73,7 +99,7 @@ License: For each use you must have a valid license purchased only from above li
 			<!--end::Modals--> --}}
 
 
-	@yield('script')
+    @yield('script')
     <!--begin::Javascript-->
     <script>
         var hostUrl = "assets/";
