@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-// SEO 
+// SEO
 use Artesaos\SEOTools\Facades\SEOMeta;
 use Artesaos\SEOTools\Facades\OpenGraph;
 use Artesaos\SEOTools\Facades\TwitterCard;
@@ -18,7 +18,7 @@ class HomeController extends Controller
         $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
         $homeLink = "http://$_SERVER[HTTP_HOST]";
         // $homeTitle = $homeSeo[0]['title'];
-        
+
         // $homeShareTitle = $homeSeo[0]['share_title'];
         // $homeDescription = $homeSeo[0]['description'];
         // $homeKeywords = $homeSeo[0]['keywords'];
@@ -34,7 +34,7 @@ class HomeController extends Controller
         SEOMeta::setDescription($homeDescription);
         SEOMeta::setKeywords($homeKeywords);
         SEOMeta::setCanonical($actual_link);
-        
+
         // <!--FaceBook-->
         OpenGraph::addImage($homeImage);
         OpenGraph::setTitle($homeTitle);
